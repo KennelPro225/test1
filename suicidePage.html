@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <title>Formulaire-Suicide</title>
+</head>
+
+<body>
+    <div class="principal">
+        <div class="secondaire">
+            <!-- fond degrade -->
+            <div class="trois">
+                <div class="sidebar_gche">
+                    <div class="menu">
+                        <a href="index.html">
+                            <div class="puce_verte">
+                                01
+                            </div>
+                            <div class="list-item">Accident</div>
+                        </a>
+
+                        <a href="volPage.html">
+                            <div class="puce_verte">
+                                02
+                            </div>
+                            <div class="list-item">Vol</div>
+                        </a>
+
+                        <a href="violPage.html">
+                            <div class="puce_verte">
+                                03
+                            </div>
+                            <div class="list-item">Viol</div>
+                        </a>
+
+                        <a href="meurtrePage.html">
+                            <div class="puce_verte">
+                                04
+                            </div>
+                            <div class="list-item">Meurtre</div>
+                        </a>
+
+                        <a href="suicidePage.html">
+                            <div class="puce_verte">
+                                05
+                            </div>
+                            <div class="list-item">Suicide</div>
+                        </a>
+
+                        <a href="incendiePage.html">
+                            <div class="puce_verte">
+                                06
+                            </div>
+                            <div class="list-item">Incendie</div>
+                        </a>
+
+
+                        <a href="inondationPage.html">
+                            <div class="puce_verte">
+                                07
+                            </div>
+                            <div class="list-item">Inondation</div>
+                        </a>
+
+                        <a href="Negligeance.html">
+                            <div class="puce_verte">
+                                08
+                            </div>
+                            <div class="list-item">Negligeance Medicale</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fond_blanc">
+                    <div id="logo">
+                        <img src="./assets/logo.svg" alt="Logo Secure Level">
+                    </div>
+                    <div class="text-form">
+                        <h2>enregistrement de cas de suicide</h2>
+                        <p>S’il vous plaît, veuillez vous assurer de bien remplir le formulaire</p>
+                    </div>
+
+                    <form action="" method='post'>
+                        <div class="first_template">
+                            <fieldset>
+                                <legend>Titre</legend>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Titre">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Type</legend>
+                                <select name="type" id="type">
+                                    <option value="">Type de viol</option>
+                                    <option value="Inconnu">Inconnu</option>
+                                    <option value="Chagrin">Chagrin</option>
+                                    <option value="Depression">Depression</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="first_template">
+                            <fieldset>
+                                <legend>Lieu</legend>
+                                <select name="lieu" id="lieu">
+                                    <option>Ok Ok</option>
+                                </select>
+                            </fieldset>
+
+                        </div>
+                        <div class="first_template">
+                            <fieldset>
+                                <legend>Nombre de victimes</legend>
+                                <input type="number" class="form-control" id="nbvictimes" name="nbvictimes"
+                                    placeholder="Nombre de victimes" min="0" step="1" onchange="handleChange()"
+                                    oninput="handleInput()">
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Nombre de victimes Enfant</legend>
+                                <input type="number" class="form-control" id="nbrE" name="nbrE"
+                                    placeholder="Nombre de victimes Enfant" onchange="handleChange()"
+                                    oninput="handleInput()" min="0" step="1">
+                            </fieldset>
+                        </div>
+                        <div class="first_template">
+                            <fieldset>
+                                <legend>Nombre de victimes Femme</legend>
+                                <input type="number" class="form-control" id="nbrF" name="nbrF"
+                                    placeholder="Nombre de victimes Femme" onchange="handleChange()"
+                                    oninput="handleInput()" min="0" step="1">
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Nombre de victimes Homme</legend>
+                                <input type="number" class="form-control" id="nbrE" name="nbrE"
+                                    placeholder="Nombre de victimes Enfant" onchange="handleChange()"
+                                    oninput="handleInput()" min="0" step="1">
+                            </fieldset>
+                            <!-- <span id="text-alert" style="color:#bd1818; display:none;">Les chiffres entrés ne
+                                correspondent pas</span> -->
+                        </div>
+
+                        <div class="first_template">
+                            <fieldset>
+                                <legend>Source</legend>
+                                <input type="text" class="form-control" id="source" name="source" placeholder="Source">
+                            </fieldset>
+                        </div>
+
+                        <div class="first_template">
+                            <fieldset class="dateItem">
+                                <legend>Date de l'évènement</legend>
+                                <div id="datetime">
+                                    <div>
+                                        <fieldset>
+                                            <input type="number" name="mois" id="mois" placeholder="MM" min="1"
+                                                max="12">
+                                        </fieldset>
+                                    </div>
+                                    <div>
+                                        <fieldset id="day">
+                                            <input type="number" name="jour" id="jour" placeholder="DD" min="1"
+                                                max="31">
+                                        </fieldset>
+                                    </div>
+                                    <div>
+                                        <fieldset id="year">
+                                            <input type="number" name="annee" id="annee" placeholder="YYYY" min="2000"
+                                                max="2022">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="first_template">
+                            <input type="submit" name="send" id="bouton" value="Valider">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript Code -->
+    <script src="./js/date.js"></script>
+    <script src="js/form.js"></script>
+    <script src="./js/calcul.js"></script>
+</body>
+
+</html>
